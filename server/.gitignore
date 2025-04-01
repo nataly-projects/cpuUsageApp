@@ -1,0 +1,18 @@
+# Dependency directories
+/node_modules
+
+# Environment file
+.env
+
+# Build artifacts
+/build
+/dist
+
+
+# IDE and editor files
+.idea
+.vscode
+
+# npm lock file
+package-lock.json
+yarn.lock
