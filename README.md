@@ -79,7 +79,7 @@ npm start
 - Period (seconds): 60  
 - Time Period: 1h  
 ![Below is an example of input given to the application:](https://github.com/nataly-projects/cpuUsageApp/issues/2#issue-2964330085)
-
+![Image](https://github.com/user-attachments/assets/abc486e0-dec0-4ca7-ba45-d665fcb6f6ef)
 ## Example Output
 ![Below is an example of the CPU usage graph displayed by the application:](https://github.com/nataly-projects/cpuUsageApp/issues/3#issue-2964332891)
 
