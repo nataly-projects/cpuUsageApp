@@ -4,11 +4,11 @@ import Form from "./components/Form";
 import Chart from "./components/Chart";
 
 const App = () => {
-  const [cpuData, setCpuData] = useState([]);
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleDataFetched = (data) => {
-    setCpuData(data);
+  const handleDataFetched = (cpuData) => {
+    setData(cpuData);
     setIsLoading(false);
   };
 
@@ -28,16 +28,16 @@ const App = () => {
         </Box>
       ) 
       :
-      cpuData?.cpuData?.length > 0 ?(
-        <Chart data={cpuData} />
+      data?.cpuData?.length > 0 ?(
+        <Chart data={data} />
       ) : (
-        cpuData?.warningMessage && (
+        data?.warningMessage && (
         <Typography 
           variant="body1" 
           color="textSecondary" 
           sx={{ mt: 2, textAlign: 'center' }}
         >
-          {cpuData?.warningMessage }
+          {data?.warningMessage }
         </Typography>
         )
       )}

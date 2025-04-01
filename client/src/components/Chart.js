@@ -11,7 +11,7 @@ import {
   Legend
 } from "recharts";
 
-const Chart = ({ data, isLoading }) => {
+const Chart = ({ data }) => {
   const formattedData = (!data?.cpuData || data?.cpuData?.length === 0) ? 
   [] : 
   data?.cpuData?.sort((a, b) => new Date(a.Timestamp) - new Date(b.Timestamp)).map(item => {
