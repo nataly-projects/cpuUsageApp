@@ -78,6 +78,14 @@ npm start
 - IP Address: 18.220.15.99  
 - Period (seconds): 60  
 - Time Period: 1h  
+https://github.com/nataly-projects/cpuUsageApp/issues/2#issue-2964330085
+
+## Example Output
+Below is an example of the CPU usage graph displayed by the application:
+https://github.com/nataly-projects/cpuUsageApp/issues/3#issue-2964332891
+
+Below is an example of the CPU usage with warning graph displayed by the application:
+https://github.com/nataly-projects/cpuUsageApp/issues/4#issue-2964334351
 
 ## Technologies Used
 
@@ -90,12 +98,14 @@ The backend interacts with AWS CloudWatch to retrieve CPU usage metrics using th
 
 #### Retrieving the Instance ID
 Since CloudWatch requires the InstanceId and not the IP address, we first need to find the EC2 instance associated with the provided IP. This is done using the EC2Client from @aws-sdk/client-ec2. The backend sends a request to AWS to describe instances and filter the results based on the given IP. Once the matching instance is found, we extract its InstanceId.
-  📌 [AWS Docs: DescribeInstancesCommand](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/ec2/command/DescribeInstancesCommand/)
+
+📌 [AWS Docs: DescribeInstancesCommand](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/ec2/command/DescribeInstancesCommand/)
 
 
 #### Fetching CPU Usage Metrics
 Once we have the InstanceId, we use GetMetricStatisticsCommand from @aws-sdk/client-cloudwatch to retrieve CPU utilization data for that instance. This command fetches CPU usage statistics within the specified time period and returns the data points needed for visualization.
-  📌 [AWS Docs: GetMetricStatisticsCommand](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/cloudwatch/command/GetMetricStatisticsCommand/)
+
+📌 [AWS Docs: GetMetricStatisticsCommand](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/client/cloudwatch/command/GetMetricStatisticsCommand/)
 
 #### Adjusting Period Values
 AWS CloudWatch enforces specific constraints on the period parameter depending on the requested time period. The backend includes logic to automatically adjust invalid period values to the closest valid value based on these constraints. If an adjustment is made, a warning message is displayed to the user indicating the change.
