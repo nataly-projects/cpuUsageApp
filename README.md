@@ -78,12 +78,12 @@ npm start
 - IP Address: 18.220.15.99  
 - Period (seconds): 60  
 - Time Period: 1h  
-[Below is an example of input given to the application:](https://github.com/nataly-projects/cpuUsageApp/issues/2#issue-2964330085)
+![Below is an example of input given to the application:](https://github.com/nataly-projects/cpuUsageApp/issues/2#issue-2964330085)
 
 ## Example Output
-[Below is an example of the CPU usage graph displayed by the application:](https://github.com/nataly-projects/cpuUsageApp/issues/3#issue-2964332891)
+![Below is an example of the CPU usage graph displayed by the application:](https://github.com/nataly-projects/cpuUsageApp/issues/3#issue-2964332891)
 
-[Below is an example of the CPU usage with warning graph displayed by the application:](https://github.com/nataly-projects/cpuUsageApp/issues/4#issue-2964334351)
+![Below is an example of the CPU usage with warning graph displayed by the application:](https://github.com/nataly-projects/cpuUsageApp/issues/4#issue-2964334351)
 
 ## Technologies Used
 
